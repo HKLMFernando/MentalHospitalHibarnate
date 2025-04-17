@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="459.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.mentalhealththeraphycenter.controller.LoginController">
+   <children>
+      <Pane prefHeight="464.0" prefWidth="26.0" style="-fx-background-color: #1e81b0;" />
+      <Pane layoutX="669.0" layoutY="-6.0" prefHeight="469.0" prefWidth="26.0" style="-fx-background-color: #1e81b0;" />
+      <Pane layoutX="26.0" layoutY="-1.0" prefHeight="26.0" prefWidth="200.0" />
+      <Pane layoutX="25.0" prefHeight="26.0" prefWidth="645.0" style="-fx-background-color: #1e81b0;" />
+      <Pane layoutX="25.0" layoutY="437.0" prefHeight="26.0" prefWidth="645.0" style="-fx-background-color: #1e81b0;" />
+      <Label layoutX="248.0" layoutY="37.0" prefHeight="40.0" prefWidth="198.0" text="WELCOME TO" textFill="#080808">
+         <font>
+            <Font name="Impact" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="text" layoutX="140.0" layoutY="89.0" prefHeight="66.0" prefWidth="413.0" text=" Mental Health Therapy Center" textFill="#184646" wrapText="true">
+         <font>
+            <Font name="Georgia Bold" size="25.0" />
+         </font>
+      </Label>
+      <Line endX="432.5999755859375" endY="-1.52587890625E-5" layoutX="221.0" layoutY="170.0" startX="-169.0" startY="-1.52587890625E-5" />
+      <Label layoutX="407.0" layoutY="336.0" prefHeight="40.0" prefWidth="110.0" text="ADMIN" wrapText="true">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="202.0" layoutY="336.0" prefHeight="40.0" prefWidth="90.0" text="USER" wrapText="true">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="user" fitHeight="121.0" fitWidth="132.0" layoutX="160.0" layoutY="187.0" onMouseClicked="#userLogingAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/icons8-user-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="admin" fitHeight="121.0" fitWidth="132.0" layoutX="380.0" layoutY="187.0" onMouseClicked="#adminActionEvent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/icons8-admin-80.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

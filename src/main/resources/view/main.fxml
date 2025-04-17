@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.mentalhealththeraphycenter.controller.MainController">
+   <children>
+      <Pane fx:id="btnPatient" layoutY="130.0" onMouseClicked="#btnPatientOnAction" prefHeight="568.0" prefWidth="187.0" style="-fx-background-color: #21130d;">
+         <children>
+            <Button layoutX="15.0" layoutY="74.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="patient">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnTherapists" layoutX="15.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#btnTherapistsOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="Therapists">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAppoiment" layoutX="18.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#btnAppoimentOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="Appoiments">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnTheraphyPrograme" layoutX="19.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#btnTherapyProgrameOnAction" prefHeight="40.0" prefWidth="144.0" style="-fx-background-radius: 10;" text="Theraphy Programe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUser" layoutX="15.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#btnUserOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="users">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPayment" layoutX="15.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#btnPaymentOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="payment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane prefHeight="130.0" prefWidth="1401.0" style="-fx-background-color: #21130d;">
+         <children>
+            <Label fx:id="text" layoutX="316.0" layoutY="26.0" prefHeight="66.0" prefWidth="637.0" text=" Mental Health Therapy Center" textFill="#feffff" wrapText="true">
+               <font>
+                  <Font name="Georgia Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="102.0" fitWidth="116.0" layoutX="31.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/icons8-hospital-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="lordAncor" layoutX="187.0" layoutY="130.0" prefHeight="568.0" prefWidth="1215.0" />
+   </children>
+</AnchorPane>
