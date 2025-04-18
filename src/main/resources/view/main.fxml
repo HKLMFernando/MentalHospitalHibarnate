@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.mentalhealththeraphycenter.controller.MainController">
    <children>
       <Pane fx:id="btnPatient" layoutY="130.0" onMouseClicked="#btnPatientOnAction" prefHeight="568.0" prefWidth="187.0" style="-fx-background-color: #21130d;">
@@ -25,12 +24,12 @@
             </Button>
             <Button fx:id="btnAppoiment" layoutX="18.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#btnAppoimentOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="Appoiments">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <Button fx:id="btnTheraphyPrograme" layoutX="19.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#btnTherapyProgrameOnAction" prefHeight="40.0" prefWidth="144.0" style="-fx-background-radius: 10;" text="Theraphy Programe">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Button>
             <Button fx:id="btnUser" layoutX="15.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#btnUserOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-radius: 10;" text="users">
@@ -47,7 +46,7 @@
       </Pane>
       <Pane prefHeight="130.0" prefWidth="1401.0" style="-fx-background-color: #21130d;">
          <children>
-            <Label fx:id="text" layoutX="316.0" layoutY="26.0" prefHeight="66.0" prefWidth="637.0" text=" Mental Health Therapy Center" textFill="#feffff" wrapText="true">
+            <Label fx:id="text" layoutX="429.0" layoutY="26.0" prefHeight="66.0" prefWidth="637.0" text=" Mental Health Therapy Center" textFill="#feffff" wrapText="true">
                <font>
                   <Font name="Georgia Bold" size="36.0" />
                </font>

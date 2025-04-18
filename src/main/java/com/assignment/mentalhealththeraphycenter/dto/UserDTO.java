@@ -1,13 +1,14 @@
 package com.assignment.mentalhealththeraphycenter.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class UserDto {
+public class UserDTO {
     private String userID;
     private String userFullName;
     private String userEmail;
