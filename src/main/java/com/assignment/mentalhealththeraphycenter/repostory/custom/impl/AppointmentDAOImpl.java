@@ -1,22 +1,54 @@
 package com.assignment.mentalhealththeraphycenter.repostory.custom.impl;
 
+import com.assignment.mentalhealththeraphycenter.config.FactoryConfiguration;
 import com.assignment.mentalhealththeraphycenter.entity.Appointments;
 import com.assignment.mentalhealththeraphycenter.repostory.custom.AppointmentDAO;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 public class AppointmentDAOImpl implements AppointmentDAO {
+    private final  FactoryConfiguration factoryConfiguration = FactoryConfiguration.getInstance();
+
+    public boolean save(Appointments appointments) throws SQLException {
+        Session session = factoryConfiguration.getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            session.persist(appointments);
+            session.flush();
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            transaction.rollback();
+            throw new RuntimeException("save failed in AppointmentDAOImpl" + e.getMessage());
+        }finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+    }
+
     @Override
     public boolean save(Appointments appointments, Session session) throws SQLException {
-        return false;
+        try{
+            session.persist(appointments);
+            return true;
+        }catch(Exception e){
+            throw new SQLException(e.getMessage());
+        }
     }
 
     @Override
     public boolean update(Appointments appointments, Session session) throws SQLException, ClassNotFoundException {
-        return false;
+        try{
+            session.merge(appointments);
+            return true;
+        }catch(Exception e){
+            throw new SQLException(e.getMessage());
+        }
     }
 
     @Override
@@ -36,6 +68,14 @@ public class AppointmentDAOImpl implements AppointmentDAO {
 
     @Override
     public Optional<String> getLastPK() {
-        return Optional.empty();
+
+        Session session = factoryConfiguration.getSession();
+
+        String lastPk = session
+                .createQuery("SELECT t.id FROM Appointments t ORDER BY t.id DESC", String.class)
+                .setMaxResults(1)
+                .uniqueResult();
+
+        return Optional.ofNullable(lastPk);
     }
 }

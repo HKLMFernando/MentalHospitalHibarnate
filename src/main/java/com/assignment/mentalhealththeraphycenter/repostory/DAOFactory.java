@@ -1,6 +1,7 @@
 package com.assignment.mentalhealththeraphycenter.repostory;
 
 import com.assignment.mentalhealththeraphycenter.repostory.custom.*;
+import com.assignment.mentalhealththeraphycenter.repostory.custom.impl.*;
 
 public class DAOFactory {
     public static DAOFactory daoFactory;
