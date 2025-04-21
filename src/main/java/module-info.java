@@ -9,6 +9,7 @@ module com.assignment.mentalhealththeraphycenter {
     requires java.naming;
     requires org.hibernate.orm.core;
     requires  lombok;
+    requires java.desktop;
     opens com.assignment.mentalhealththeraphycenter.config to jakarta.persistence;
     opens com.assignment.mentalhealththeraphycenter.entity to org.hibernate.orm.core;
 

@@ -2,8 +2,8 @@ package com.assignment.mentalhealththeraphycenter.service.custom;
 
 import com.assignment.mentalhealththeraphycenter.dto.*;
 import com.assignment.mentalhealththeraphycenter.service.SuperBO;
-import lk.ijse.project.mentalHealthTherapyCenter.dto.*;
-import lk.ijse.project.mentalHealthTherapyCenter.service.SuperBO;
+
+
 
 import java.util.List;
 import java.util.Optional;

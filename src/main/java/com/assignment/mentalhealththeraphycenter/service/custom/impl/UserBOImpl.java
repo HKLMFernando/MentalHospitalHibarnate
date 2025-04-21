@@ -58,7 +58,7 @@ public class UserBOImpl implements UserBO {
     }
 
     @Override
-    public boolean findUser(String UserName) {
+    public boolean findUser(String username) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try {

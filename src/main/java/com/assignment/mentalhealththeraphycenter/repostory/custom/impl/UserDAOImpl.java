@@ -15,7 +15,7 @@ import java.util.Optional;
 
 public class UserDAOImpl  implements UserDAO {
     @Override
-    public boolean updateUser(String UserName, String UserEmail, String UserNewPassword) {
+    public boolean updateUser(String userName, String userEmail, String userNewPassword) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -59,7 +59,7 @@ public class UserDAOImpl  implements UserDAO {
     }
 
     @Override
-    public User findPassWord(String password, String role, Session session) {
+    public User findPassWord(String UserName,String role, Session session) {
 
         Query<User> query = session.createQuery("FROM User WHERE userName = :username AND userRole = :role", User.class);
         query.setParameter("username", UserName);
