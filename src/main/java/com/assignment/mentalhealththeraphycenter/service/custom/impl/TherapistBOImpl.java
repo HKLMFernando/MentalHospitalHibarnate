@@ -1,39 +1,140 @@
 package com.assignment.mentalhealththeraphycenter.service.custom.impl;
 
+import com.assignment.mentalhealththeraphycenter.config.FactoryConfiguration;
 import com.assignment.mentalhealththeraphycenter.dto.DoctorDTO;
+import com.assignment.mentalhealththeraphycenter.entity.Therapist;
+import com.assignment.mentalhealththeraphycenter.repostory.DAOFactory;
+import com.assignment.mentalhealththeraphycenter.repostory.DAOType;
+import com.assignment.mentalhealththeraphycenter.repostory.custom.TherapistDAO;
 import com.assignment.mentalhealththeraphycenter.service.custom.TherapistBO;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class TherapistBOImpl implements TherapistBO {
+    TherapistDAO therapistDAO = DAOFactory.getInstance().getDAO(DAOType.THERAPIST);
+
     @Override
     public List<DoctorDTO> getALLDoctors() throws Exception {
-        return List.of();
+        List<Therapist> therapists = therapistDAO.getAll();
+        List<DoctorDTO> doctorDTOS = new ArrayList<>();
+
+        for (Therapist therapist : therapists) {
+            DoctorDTO dto = new DoctorDTO(
+                    therapist.getDoctorID(),
+                    therapist.getDoctorName(),
+                    therapist.getDoctorQualifications(),
+                    therapist.getDoctorAvailability(),
+                    therapist.getDoctorPhone(),
+                    therapist.getDoctorEmail()
+            );
+            doctorDTOS.add(dto);
+        }
+        return doctorDTOS;
     }
 
     @Override
     public boolean saveTherapist(DoctorDTO doctorDTO) {
-        return false;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            Therapist therapist = new Therapist();
+            therapist.setDoctorID(doctorDTO.getDoctorId());
+            therapist.setDoctorName(doctorDTO.getDoctorName());
+            therapist.setDoctorQualifications(doctorDTO.getDoctorQualification());
+            therapist.setDoctorAvailability(doctorDTO.getDoctorAvailability());
+            therapist.setDoctorPhone(doctorDTO.getDoctorPhone());
+            therapist.setDoctorEmail(doctorDTO.getDoctorEmail());
+
+            boolean isSaved =  therapistDAO.save(therapist,session);
+            if (isSaved) {
+                transaction.commit();
+                return true;
+            }else{
+                transaction.rollback();
+                return false;
+            }
+
+        } catch (HibernateException | SQLException e) {
+            throw new RuntimeException("SQL error while saving therapist: " + e.getMessage());
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean updateTherapist(DoctorDTO doctorDTO) {
-        return false;
+        System.out.println(doctorDTO.getDoctorId());
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            Therapist therapist = new Therapist();
+            therapist.setDoctorID(doctorDTO.getDoctorId());
+            therapist.setDoctorName(doctorDTO.getDoctorName());
+            therapist.setDoctorQualifications(doctorDTO.getDoctorQualification());
+            therapist.setDoctorAvailability(doctorDTO.getDoctorAvailability());
+            therapist.setDoctorPhone(doctorDTO.getDoctorPhone());
+            therapist.setDoctorEmail(doctorDTO.getDoctorEmail());
+            boolean isUpdated = therapistDAO.update(therapist,session);
+            if (isUpdated) {
+                transaction.commit();
+                return true;
+            }else {
+                transaction.rollback();
+                return false;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("SQL error while saving therapist");
+        }catch (ClassNotFoundException e){
+            throw new RuntimeException("Class not found Error");
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean deleteTherapist(String DoctorID) throws SQLException, ClassNotFoundException {
-        return false;
+        try {
+            return therapistDAO.deleteByPk(DoctorID);
+        } catch (SQLException e) {
+            throw new RuntimeException("SQL error while saving therapist");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("Class not found Error");
+        }
     }
 
     @Override
     public String getNextTherapyID() {
-        return "";
+        Optional<String> lastPkOptional = therapistDAO.getLastPK();
+        if (lastPkOptional.isPresent()) {
+            String lastPk = lastPkOptional.get();
+            int nextId = Integer.parseInt(lastPk.replace("T", "")) + 1;
+            return String.format("T%03d", nextId);
+        } else {
+            return "T001";  // Default if no records exist
+        }
     }
 
     @Override
     public List<DoctorDTO> getDocNames() throws Exception {
-        return List.of();
+        List<Therapist> therapists = therapistDAO.getAll();
+        List<DoctorDTO> docNames = new ArrayList<>();
+        for (Therapist therapist : therapists) {
+            DoctorDTO doctorDTO = new DoctorDTO(
+                    therapist.getDoctorID(),
+                    therapist.getDoctorName(),
+                    therapist.getDoctorQualifications(),
+                    therapist.getDoctorAvailability(),
+                    therapist.getDoctorPhone(),
+                    therapist.getDoctorEmail()
+            );
+            docNames.add(doctorDTO);
+        }
+        return docNames;
     }
 }
