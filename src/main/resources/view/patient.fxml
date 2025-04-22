@@ -16,18 +16,10 @@
                 <Font name="Arial Rounded MT Bold" size="28.0" />
             </font>
         </Label>
-
-        <Label layoutX="133.0" layoutY="102.0" prefHeight="18.0" prefWidth="70.0" text="Patient Id :" />
-
-        <Label layoutX="133.0" layoutY="142.0" prefHeight="18.0" prefWidth="94.0" text="Patient Name :" />
         <TextField fx:id="txtpatientName" layoutX="267.0" layoutY="135.0" prefHeight="29.0" prefWidth="553.0" promptText="kamal" />
-
-        <Label layoutX="133.0" layoutY="182.0" text="Date of Birth" />
         <TextField fx:id="txtPatientAge" layoutX="268.0" layoutY="175.0" prefHeight="29.0" prefWidth="554.0" promptText="xxxx/xx/xx" />
 
-        <Label layoutX="133.0" layoutY="262.0" text="Mobile Number :" />
-
-        <Button fx:id="btnRegister" layoutX="942.0" layoutY="202.0" onAction="#btnRegisterOnAction" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #142171; -fx-text-fill: white;" text="Register">
+        <Button fx:id="btnRegister" layoutX="942.0" layoutY="151.0" onAction="#btnRegisterOnAction" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #142171; -fx-text-fill: white;" text="Register">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font></Button>
@@ -46,15 +38,51 @@
         </TableView>
         <Label fx:id="lblPaymentId" layoutX="268.0" layoutY="94.0" prefHeight="26.0" prefWidth="103.0" text="P001" />
         <TextField fx:id="txtPatientMobile" layoutX="268.0" layoutY="256.0" prefHeight="30.0" prefWidth="190.0" promptText="0700000000" />
-        <Button fx:id="btnUpdate" layoutX="942.0" layoutY="273.0" mnemonicParsing="false" onAction="#btnUpdateOnClick" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold;" text="Update" />
-        <Button fx:id="btnDelete" layoutX="942.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Delete" />
-        <Label layoutX="133.0" layoutY="301.0" text="Address :" />
+        <Button fx:id="btnUpdate" layoutX="942.0" layoutY="241.0" mnemonicParsing="false" onAction="#btnUpdateOnClick" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: blue; -fx-text-fill: white; -fx-font-weight: bold;" text="Update" />
+        <Button fx:id="btnDelete" layoutX="942.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnDeleteOnClick" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold;" text="Delete" />
         <TextField fx:id="txtPatientAddress" layoutX="268.0" layoutY="297.0" prefHeight="30.0" prefWidth="553.0" promptText="kalutara" />
-        <Label layoutX="133.0" layoutY="219.0" prefHeight="24.0" prefWidth="96.0" text="Patient Gender :" />
       <ComboBox fx:id="genderBox" layoutX="268.0" layoutY="216.0" prefHeight="26.0" prefWidth="189.0" promptText="Gender" />
-      <Label layoutX="500.0" layoutY="259.0" prefHeight="24.0" prefWidth="90.0" text="Nic :" />
       <TextField fx:id="txtNIC" layoutX="601.0" layoutY="258.0" prefHeight="30.0" prefWidth="218.0" promptText="xxxxxxxxxxxxx" />
-      <Label layoutX="132.0" layoutY="346.0" text="EMail :" />
       <TextField fx:id="txtEmail" layoutX="264.0" layoutY="339.0" prefHeight="30.0" prefWidth="553.0" promptText="wshbh@gmail.com" />
+      <Label layoutX="133.0" layoutY="301.0" text="Adress">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="180.0" text="Date ofBirth">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="137.0" text="Patient Name">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="97.0" text="Patient ID">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="263.0" text="NIC">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="261.0" text="Mobile">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="218.0" text="Gender">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="344.0" text="EMail">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

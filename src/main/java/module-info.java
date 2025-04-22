@@ -10,6 +10,7 @@ module com.assignment.mentalhealththeraphycenter {
     requires org.hibernate.orm.core;
     requires  lombok;
     requires java.desktop;
+    requires spring.security.crypto;
     opens com.assignment.mentalhealththeraphycenter.config to jakarta.persistence;
     opens com.assignment.mentalhealththeraphycenter.entity to org.hibernate.orm.core;
 

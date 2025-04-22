@@ -11,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import lombok.Setter;
 
 import java.io.IOException;
 
@@ -54,6 +55,10 @@ public class MainController {
 
     @FXML
     private VBox vbox;
+    private String role;
+
+    @Setter
+    private String userName;
 
     @FXML
     void appointmentsAction(MouseEvent event) {
@@ -116,5 +121,19 @@ public class MainController {
         stage.setTitle("The Serenity Mental Health Therapy Center");
         stage.show();
     }
+
+    public void setUserRole(String role) {
+        this.role = role;
+        configureUI();
+    }
+
+    private void configureUI() {
+        if ("admin".equals(role)) {
+            adminVbox.setVisible(true);
+        } else {
+            adminVbox.setDisable(true);
+        }
+    }
+
 
 }
