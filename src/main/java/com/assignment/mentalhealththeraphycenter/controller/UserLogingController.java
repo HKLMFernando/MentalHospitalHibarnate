@@ -82,12 +82,12 @@ public class UserLogingController implements Initializable {
         MainController controller = loader.getController();
         controller.setUserRole(role);
         controller.setUserName(userName);
-       // Stage currentStage = (Stage) clickhere.getScene().getWindow();
+        Stage currentStage = (Stage) login.getScene().getWindow();
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("The Serenity Mental Health Therapy Center");
-      //  currentStage.close();
+        currentStage.close();
         stage.show();
     }
     private void refreshPage(){
