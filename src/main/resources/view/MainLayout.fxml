@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="780.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.mentalhealththeraphycenter.controller.MainController">
+   <children>
+      <VBox fx:id="vbox" prefHeight="780.0" prefWidth="235.0" style="-fx-background-color: Black;">
+         <children>
+            <ImageView fx:id="image" fitHeight="113.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/icons8-hospital-48.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="53.0" />
+               </VBox.margin></ImageView>
+            <Label prefHeight="30.0" prefWidth="235.0" text="FEATURES" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="appointments" mnemonicParsing="false" onMouseClicked="#appointmentsAction" prefHeight="45.0" prefWidth="235.0" style="-fx-background-radius: 12;" text="APPOINTMENTS" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" left="11.0" right="11.0" top="12.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="patients" layoutX="10.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#patientsAction" prefHeight="45.0" prefWidth="237.0" style="-fx-background-radius: 12;" text="PATIENTS" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" left="11.0" right="11.0" top="12.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="payments" layoutX="10.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#paymentsAction" prefHeight="45.0" prefWidth="237.0" style="-fx-background-radius: 12;" text="PAYMENTS" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" left="11.0" right="11.0" top="12.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <VBox fx:id="adminVbox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="235.0" text="ADMIN FEATURES" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="therapist" mnemonicParsing="false" onMouseClicked="#doctorDetailsAction" prefHeight="45.0" prefWidth="237.0" style="-fx-background-radius: 12;" text="THERAPIST" textAlignment="CENTER">
+                     <font>
+                        <Font name="Georgia Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="11.0" right="11.0" top="12.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="therapyPrograms" mnemonicParsing="false" onMouseClicked="#therapyProgramAction" prefHeight="65.0" prefWidth="235.0" style="-fx-background-radius: 12;" text="THERAPY MANAGEMENT" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia Bold" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="8.0" right="8.0" top="12.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+            <Label prefHeight="30.0" prefWidth="235.0" text="Profile Settings" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="user" mnemonicParsing="false" onMouseClicked="#userAction" prefHeight="45.0" prefWidth="237.0" style="-fx-background-radius: 12;" text="My Profile" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="19.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="11.0" />
+               </VBox.margin>
+            </Button>
+            <ImageView fitHeight="119.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <AnchorPane fx:id="header" layoutX="235.0" prefHeight="74.0" prefWidth="1291.0" style="-fx-background-color: black;">
+         <children>
+            <Label fx:id="dashBoardFrom" layoutX="406.0" layoutY="20.0" prefHeight="46.0" prefWidth="502.0" text="Mental Health Therapy Center" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Line endX="1182.13330078125" endY="7.62939453125E-6" layoutX="336.0" layoutY="74.0" startX="-100.0" />
+      <Line endX="-28.800003051757812" endY="-294.0" layoutX="264.0" layoutY="294.0" startX="-28.800003051757812" startY="484.10003662109375" strokeWidth="3.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </Line>
+      <AnchorPane fx:id="loadAnchor" layoutX="236.0" layoutY="75.0" prefHeight="703.0" prefWidth="1290.0" style="-fx-background-color: #D3D3D3;" />
+   </children>
+</AnchorPane>

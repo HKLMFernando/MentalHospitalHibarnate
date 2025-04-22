@@ -10,7 +10,7 @@ import java.io.IOException;
 public class AppInitializer extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/view/Appointments.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/view/MainLayout.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("The Serenity Mental Health Therapy Center");
 //scene.getStylesheets().add(getClass().getResource("/css/login.css").toExternalForm());

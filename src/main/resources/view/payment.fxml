@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="703.0" prefWidth="1290.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.mentalhealththeraphycenter.controller.PayementController">
+   <children>
+      <TableView fx:id="table" layoutX="34.0" layoutY="159.0" onMouseClicked="#tableAction" prefHeight="522.0" prefWidth="1222.0">
+        <columns>
+          <TableColumn fx:id="tablePayID" prefWidth="135.20000457763672" text="ID" />
+          <TableColumn fx:id="tablePayerName" prefWidth="204.8000030517578" text="Payer" />
+            <TableColumn fx:id="tablePayAmount" prefWidth="251.20004272460938" text="Amount" />
+            <TableColumn fx:id="tablePayMethod" prefWidth="189.5999755859375" text="Method" />
+            <TableColumn fx:id="tablePayDate" prefWidth="224.800048828125" text="Date" />
+            <TableColumn fx:id="tablePayTime" prefWidth="222.40008544921875" text="Time" />
+        </columns>
+      </TableView>
+      <Label layoutX="464.0" layoutY="11.0" prefHeight="72.0" prefWidth="310.0" text="Payment details " textFill="#0b1818">
+         <font>
+            <Font name="Georgia Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="image" fitHeight="64.0" fitWidth="117.0" layoutX="863.0" layoutY="611.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Pictures/Mental%20Hospital/money.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
