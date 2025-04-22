@@ -29,12 +29,12 @@
             <Image url="@../../../../../../../Pictures/Mental%20Hospital/icons8-program-50.png" />
          </image>
       </ImageView>
-      <TextField fx:id="textSessionDate" layoutX="162.0" layoutY="143.0" prefHeight="28.0" prefWidth="162.0" promptText="update session Date" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;">
+      <TextField fx:id="textSessionDate" layoutX="162.0" layoutY="143.0" prefHeight="28.0" prefWidth="162.0">
          <font>
             <Font name="Consolas Bold" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="cancelBTN" layoutX="1010.0" layoutY="108.0" mnemonicParsing="false" onAction="#cancelBTNAction" prefHeight="36.0" prefWidth="162.0" style="-fx-background-color: red;" text="Cancel Appointment" textFill="WHITE">
+      <Button fx:id="cancelBTN" layoutX="989.0" layoutY="197.0" mnemonicParsing="false" onAction="#cancelBTNAction" prefHeight="36.0" prefWidth="162.0" style="-fx-background-color: red;" text="Cancel Appointment" textFill="WHITE">
          <font>
             <Font name="Impact" size="15.0" />
          </font>
@@ -64,7 +64,7 @@
             <TableColumn fx:id="tableSessionStatus" prefWidth="126.4000244140625" text="isCancel" />
          </columns>
       </TableView>
-      <Button fx:id="rescheduleBTN" layoutX="1010.0" layoutY="54.0" mnemonicParsing="false" onAction="#rescheduleBTNAction" prefHeight="36.0" prefWidth="162.0" style="-fx-background-color: Darkblue;" text="Reschedule" textFill="WHITE">
+      <Button fx:id="rescheduleBTN" layoutX="989.0" layoutY="131.0" mnemonicParsing="false" onAction="#rescheduleBTNAction" prefHeight="36.0" prefWidth="162.0" style="-fx-background-color: Darkblue;" text="Reschedule" textFill="WHITE">
          <font>
             <Font name="Impact" size="15.0" />
          </font>
@@ -79,24 +79,24 @@
             </DropShadow>
          </effect>
       </Button>
-      <TextField fx:id="textSessionTime" layoutX="162.0" layoutY="201.0" prefHeight="28.0" prefWidth="162.0" promptText="update session Time" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;">
+      <TextField fx:id="textSessionTime" layoutX="162.0" layoutY="201.0" prefHeight="28.0" prefWidth="162.0">
          <font>
             <Font name="Consolas Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtSessionNotes" layoutX="162.0" layoutY="65.0" prefHeight="28.0" prefWidth="162.0" promptText="update session Notes" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;">
+      <TextField fx:id="txtSessionNotes" layoutX="162.0" layoutY="65.0" prefHeight="28.0" prefWidth="162.0">
          <font>
             <Font name="Consolas Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtPaymentAmount" layoutX="542.0" layoutY="65.0" prefHeight="28.0" prefWidth="162.0" promptText="update Paymet Amount" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;">
+      <TextField fx:id="txtPaymentAmount" layoutX="574.0" layoutY="65.0" prefHeight="28.0" prefWidth="162.0" promptText="update Paymet Amount">
          <font>
             <Font name="Consolas Bold" size="14.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="ComboDocId" layoutX="542.0" layoutY="202.0" opacity="0.58" prefHeight="26.0" prefWidth="162.0" promptText="update Doctor ID" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-      <ComboBox fx:id="comboPatientName" layoutX="827.0" layoutY="65.0" opacity="0.58" prefHeight="26.0" prefWidth="162.0" promptText="update Patient Name" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-      <ComboBox fx:id="comboPaymentMethod" layoutX="542.0" layoutY="131.0" opacity="0.58" prefHeight="26.0" prefWidth="162.0" promptText="update Paymet Method" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <ComboBox fx:id="ComboDocId" layoutX="583.0" layoutY="202.0" opacity="0.58" prefHeight="26.0" prefWidth="162.0" promptText="update Doctor ID" />
+      <ComboBox fx:id="comboPatientName" layoutX="989.0" layoutY="66.0" opacity="0.58" prefHeight="26.0" prefWidth="162.0" promptText="update Patient Name" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <ComboBox fx:id="comboPaymentMethod" layoutX="579.0" layoutY="131.0" opacity="0.58" prefHeight="26.0" prefWidth="162.0" promptText="update Paymet Method" />
       <Label fx:id="labelSessionID" layoutX="26.0" layoutY="61.0" prefHeight="36.0" prefWidth="87.0" text="Session ID">
          <font>
             <Font name="Impact" size="16.0" />
@@ -107,7 +107,7 @@
             <Font name="Impact" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="resetBTN" layoutX="1010.0" layoutY="172.0" mnemonicParsing="false" onAction="#resetBTNAction" prefHeight="36.0" prefWidth="162.0" style="-fx-background-color: black;" text="Reset Details" textFill="WHITE">
+      <Button fx:id="resetBTN" layoutX="787.0" layoutY="197.0" mnemonicParsing="false" onAction="#resetBTNAction" prefHeight="36.0" prefWidth="162.0" style="-fx-background-color: black;" text="Reset Details" textFill="WHITE">
          <font>
             <Font name="Impact" size="15.0" />
          </font>
@@ -122,5 +122,30 @@
             </DropShadow>
          </effect>
       </Button>
+      <Label fx:id="labelPaymentID1" layoutX="26.0" layoutY="197.0" prefHeight="36.0" prefWidth="87.0" text="Update Time">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSessionID1" layoutX="405.0" layoutY="125.0" prefHeight="36.0" prefWidth="130.0" text="Update Pay Mathod">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSessionID2" layoutX="405.0" layoutY="71.0" prefHeight="36.0" prefWidth="110.0" text="Update Amount">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSessionID11" layoutX="404.0" layoutY="190.0" prefHeight="36.0" prefWidth="102.0" text="Update Doctor">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSessionID21" layoutX="797.0" layoutY="61.0" prefHeight="36.0" prefWidth="110.0" text="Update Name">
+         <font>
+            <Font name="Impact" size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

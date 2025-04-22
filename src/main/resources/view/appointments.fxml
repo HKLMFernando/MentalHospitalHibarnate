@@ -57,7 +57,7 @@
             </Label>
             <Label prefHeight="30.0" prefWidth="129.0" text="Special Notes">
                <font>
-                  <Font name="Georgia" size="20.0" />
+                  <Font name="Calibri" size="20.0" />
                </font>
                <padding>
                   <Insets bottom="12.0" top="12.0" />
@@ -84,7 +84,7 @@
             <Font name="Georgia" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="sessionTime" layoutX="186.0" layoutY="355.0" prefHeight="26.0" prefWidth="182.0" promptText="00:00:00" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <TextField fx:id="sessionTime" layoutX="186.0" layoutY="355.0" prefHeight="26.0" prefWidth="182.0" promptText="00.00" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
       <TextField fx:id="sessionNotes" layoutX="186.0" layoutY="401.0" prefHeight="26.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
       <DatePicker fx:id="sessionDate" layoutX="186.0" layoutY="444.0" prefHeight="26.0" prefWidth="182.0" />
       <Line endX="-93.4000015258789" endY="233.39999389648438" layoutX="115.0" layoutY="288.0" startX="759.3999633789062" startY="233.4000244140625" />
@@ -146,7 +146,7 @@
          </padding>
       </Label>
       <TextField fx:id="payAMOUNT" layoutX="185.0" layoutY="582.0" prefHeight="26.0" prefWidth="182.0" promptText="Rs.0000" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-      <ComboBox fx:id="paymentMethod" layoutX="589.0" layoutY="540.0" opacity="0.58" prefHeight="26.0" prefWidth="215.0" promptText="select your payment method" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <ComboBox fx:id="paymentMethod" layoutX="589.0" layoutY="540.0" opacity="0.58" prefHeight="26.0" prefWidth="215.0" promptText="select your payment method" />
       <Button fx:id="addAppointmentBTN" layoutX="1008.0" layoutY="98.0" mnemonicParsing="false" onAction="#addAppointmentBTNAction" prefHeight="30.0" prefWidth="198.0" style="-fx-background-color: green;" text="Add Appointments" textFill="WHITE">
          <font>
             <Font name="Georgia Bold" size="15.0" />
@@ -203,7 +203,7 @@
             <Font name="Impact" size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="search" layoutX="176.0" layoutY="95.0" prefHeight="30.0" prefWidth="319.0" promptText="Search Patient" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;">
+      <TextField fx:id="search" layoutX="176.0" layoutY="95.0" prefHeight="30.0" prefWidth="319.0" promptText="Search Patient">
          <font>
             <Font name="Consolas Bold" size="16.0" />
          </font>
@@ -217,7 +217,7 @@
          <children>
             <Label fx:id="patientID" prefHeight="28.0" prefWidth="181.0" text="Patient ID">
                <font>
-                  <Font name="Georgia" size="20.0" />
+                  <Font name="Calibri" size="20.0" />
                </font>
                <padding>
                   <Insets bottom="12.0" top="12.0" />
@@ -225,7 +225,7 @@
             </Label>
             <Label fx:id="patientName" prefHeight="28.0" prefWidth="178.0" text="Patient Name">
                <font>
-                  <Font name="Georgia" size="20.0" />
+                  <Font name="Bodoni MT" size="20.0" />
                </font>
                <padding>
                   <Insets bottom="12.0" top="12.0" />
@@ -233,7 +233,7 @@
             </Label>
             <Label fx:id="patientDOB" prefHeight="28.0" prefWidth="178.0" text="DOB">
                <font>
-                  <Font name="Georgia" size="20.0" />
+                  <Font name="Calibri" size="20.0" />
                </font>
                <padding>
                   <Insets bottom="12.0" top="12.0" />
@@ -332,7 +332,7 @@
       </Button>
       <Label fx:id="patientID1" layoutX="10.0" layoutY="86.0" prefHeight="48.0" prefWidth="152.0" text="Search Patient">
          <font>
-            <Font name="Georgia" size="20.0" />
+            <Font name="Calibri" size="20.0" />
          </font>
          <padding>
             <Insets bottom="12.0" top="12.0" />

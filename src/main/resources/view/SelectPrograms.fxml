@@ -35,12 +35,12 @@
             </DropShadow>
          </effect>
       </Button>
-      <Label fx:id="idLabel" layoutX="191.0" layoutY="475.0" text="Label">
+      <Label fx:id="idLabel" layoutX="191.0" layoutY="475.0">
          <font>
             <Font name="Georgia Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="nameLabel" layoutX="316.0" layoutY="473.0" text="Label">
+      <Label fx:id="nameLabel" layoutX="316.0" layoutY="473.0">
          <font>
             <Font name="Georgia Bold" size="16.0" />
          </font>

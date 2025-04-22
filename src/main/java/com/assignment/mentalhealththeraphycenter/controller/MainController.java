@@ -67,33 +67,33 @@ public class MainController implements Initializable {
     @FXML
     void appointmentsAction(MouseEvent event) {
         navigateTo("/view/appointments.fxml");
-        dashBoardFrom.setText("Appointment Details Form");
+        dashBoardFrom.setText("Welcome to the Hospital " );
 
     }
 
     @FXML
     void doctorDetailsAction(MouseEvent event) {
         navigateTo("/view/Therapist.fxml");
-        dashBoardFrom.setText("Therapist Details Form");
+        dashBoardFrom.setText("Welcome to the Hospital");
     }
 
     @FXML
     void patientsAction(MouseEvent event) {
         navigateTo("/view/patient.fxml");
-        dashBoardFrom.setText("Patients Details Form");
+        dashBoardFrom.setText("Welcome to the Hospital " );
 
     }
 
     @FXML
     void paymentsAction(MouseEvent event) {
         navigateTo("/view/payment.fxml");
-        dashBoardFrom.setText("Payment Details Form");
+        dashBoardFrom.setText("Welcome to the Hospital");
     }
 
     @FXML
     void therapyProgramAction(MouseEvent event) {
         navigateTo("/view/TherapyPrograms.fxml");
-        dashBoardFrom.setText("Therapy Programs Form");
+        dashBoardFrom.setText("Welcome to the Hospital");
     }
 
     @FXML

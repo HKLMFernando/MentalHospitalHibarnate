@@ -113,7 +113,7 @@
                   <Font name="Georgia" size="17.0" />
                </font>
             </Label>
-            <Button fx:id="user" mnemonicParsing="false" onMouseClicked="#userAction" prefHeight="45.0" prefWidth="237.0" style="-fx-background-radius: 12;" text="My Profile" textAlignment="CENTER">
+            <Button fx:id="user" mnemonicParsing="false" onMouseClicked="#userAction" prefHeight="45.0" prefWidth="237.0" style="-fx-background-radius: 12;" text="User Manage" textAlignment="CENTER">
                <font>
                   <Font name="Georgia Bold" size="19.0" />
                </font>
