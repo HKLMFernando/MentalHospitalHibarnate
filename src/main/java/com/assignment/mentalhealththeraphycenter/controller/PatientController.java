@@ -207,13 +207,13 @@ public class PatientController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        colPatientId.setCellValueFactory(new PropertyValueFactory<>("patientId"));
+        colPatientId.setCellValueFactory(new PropertyValueFactory<>("patientID"));
         colName.setCellValueFactory(new PropertyValueFactory<>("patientName"));
         colBirth.setCellValueFactory(new PropertyValueFactory<>("patientBirthDate"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("patientGender"));
         colMobile.setCellValueFactory(new PropertyValueFactory<>("patientPhone"));
         colAddrsee.setCellValueFactory(new PropertyValueFactory<>("patientAddress"));
-        colNic.setCellValueFactory(new PropertyValueFactory<>("patientNic"));
+        colNic.setCellValueFactory(new PropertyValueFactory<>("patientNIC"));
         ColEmail.setCellValueFactory(new PropertyValueFactory<>("patientEmail"));
 
 
